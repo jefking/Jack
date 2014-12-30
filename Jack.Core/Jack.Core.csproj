@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{80739F1F-9D5D-429E-863A-3B55370F3608}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jack.Core</RootNamespace>
+    <AssemblyName>Jack.Core</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Communication\ByteConnector.cs" />
+    <Compile Include="Communication\ByteTransferor.cs" />
+    <Compile Include="Communication\Client.cs" />
+    <Compile Include="Communication\Communicator.cs" />
+    <Compile Include="Communication\Connector.cs" />
+    <Compile Include="Communication\Interfaces.cs" />
+    <Compile Include="Communication\ManifestConnector.cs" />
+    <Compile Include="Communication\Peers.cs" />
+    <Compile Include="Communication\RPCServer.cs" />
+    <Compile Include="IO\Data\Synchronizer.cs" />
+    <Compile Include="IO\File.cs" />
+    <Compile Include="IO\FileSystemClient.cs" />
+    <Compile Include="IO\FileHelper.cs" />
+    <Compile Include="IO\Storage\Enums.cs" />
+    <Compile Include="IO\Storage\HardDrive.cs" />
+    <Compile Include="IO\Storage\Structs.cs" />
+    <Compile Include="IO\Structs.cs" />
+    <Compile Include="Metric\TimeQueue.cs" />
+    <Compile Include="Network\Structs.cs" />
+    <Compile Include="XML\Attributes.cs" />
+    <Compile Include="XML\ManifestXml.cs" />
+    <Compile Include="LDAP\ActiveDirectory.cs" />
+    <Compile Include="LDAP\Computer.cs" />
+    <Compile Include="Metadata\Server.cs" />
+    <Compile Include="Communication\Transferor.cs" />
+    <Compile Include="Configuration\AppConfig.cs" />
+    <Compile Include="Crypto\Cipher.cs" />
+    <Compile Include="IO\Data\DataStore.cs" />
+    <Compile Include="Delegates.cs" />
+    <Compile Include="Interfaces.cs" />
+    <Compile Include="IO\Block.cs" />
+    <Compile Include="IO\FileManifest.cs" />
+    <Compile Include="IO\FileSystem.cs" />
+    <Compile Include="IO\Storage\StorageManager.cs" />
+    <Compile Include="IO\VersionManifest.cs" />
+    <Compile Include="LDAP\IUser.cs" />
+    <Compile Include="Metadata\MetaData.cs" />
+    <Compile Include="Metadata\NewVersion.cs" />
+    <Compile Include="Metadata\Sequence.cs" />
+    <Compile Include="Metadata\Transactional.cs" />
+    <Compile Include="Network\Discovery.cs" />
+    <Compile Include="Reflection\Enums.cs" />
+    <Compile Include="Reflection\ObjectInterpreter.cs" />
+    <Compile Include="Reflection\ObjectMeta.cs" />
+    <Compile Include="Structs.cs" />
+    <Compile Include="IO\Interfaces.cs" />
+    <Compile Include="IO\Storage\Local.cs" />
+    <Compile Include="IO\Storage\Memory.cs" />
+    <Compile Include="Communication\ManifestTransferor.cs" />
+    <Compile Include="Metric\Enums.cs" />
+    <Compile Include="Metric\Interfaces.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\Assembly.cs" />
+    <Compile Include="Threading\Enums.cs" />
+    <Compile Include="Threading\Executor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <Compile Include="Windows\Services\JackService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Services\Service.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Services\Structs.cs" />
+    <Compile Include="XML\XmlDocument.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jack.Logger\Jack.Logger.csproj">
+      <Project>{363FE714-B50B-4294-94A2-A62733C833A0}</Project>
+      <Name>Jack.Logger</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
